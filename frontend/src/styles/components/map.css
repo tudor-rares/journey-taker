@@ -1,0 +1,169 @@
+/* Map component modern styles */
+
+.leaflet-container {
+  background-color: var(--surface-dark);
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom style for popup */
+.leaflet-popup-content-wrapper {
+  background-color: var(--surface);
+  color: var(--text-light);
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  overflow: hidden;
+}
+
+.leaflet-popup-tip {
+  background-color: var(--surface);
+  box-shadow: var(--card-shadow);
+}
+
+.leaflet-popup-content {
+  margin: 12px 16px;
+  line-height: 1.5;
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.leaflet-control-attribution {
+  background: rgba(22, 22, 34, 0.7) !important;
+  color: #aaa !important;
+  font-size: 10px !important;
+  padding: 3px 6px !important;
+  border-radius: 4px 0 0 0 !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--accent-light) !important;
+}
+
+/* Custom marker styles */
+.custom-map-marker {
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+  transition: all 0.2s ease;
+}
+
+.custom-map-marker:hover {
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.7));
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* Custom zoom controls */
+.leaflet-control-zoom {
+  border-radius: 12px !important;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: var(--card-shadow) !important;
+}
+
+.leaflet-control-zoom a {
+  background-color: var(--surface) !important;
+  color: var(--text-light) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+  width: 36px !important;
+  height: 36px !important;
+  line-height: 36px !important;
+  font-size: 18px !important;
+  transition: var(--hover-transition);
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: var(--surface-light) !important;
+  color: var(--accent-light) !important;
+}
+
+/* Custom route path style */
+.leaflet-interactive {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5));
+}
+
+/* Marker pin styles with modern effects */
+.marker-pin {
+  position: relative;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.marker-pin.start-pin {
+  background-color: var(--success);
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);
+}
+
+.marker-pin.end-pin {
+  background-color: var(--danger);
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
+}
+
+.marker-pin.fuel-pin {
+  background-color: var(--warning);
+  border: 2px solid white;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+}
+
+/* Modern map controls container */
+.map-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.map-control-button {
+  width: 44px;
+  height: 44px;
+  background: var(--glass-background);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  box-shadow: var(--glass-shadow);
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+
+.map-control-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  color: var(--accent-light);
+}
+
+/* Route info panel */
+.route-info-panel {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: var(--glass-background);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--glass-shadow);
+  min-width: 260px;
+  transform: translateY(0);
+  transition: var(--hover-transition);
+}
+
+.route-info-panel:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}

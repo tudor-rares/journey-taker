@@ -1,0 +1,106 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        'primary-dark': '#0f172a',
+        'primary': '#1e293b',
+        'primary-light': '#334155',
+        'surface-dark': '#1e1e2d',
+        'surface': '#222235',
+        'surface-light': '#2d2d42',
+        'accent': '#3b82f6',
+        'accent-light': '#60a5fa',
+        'accent-dark': '#2563eb',
+        'text-light': '#f8fafc',
+        'text-muted': '#94a3b8',
+        'danger': '#ef4444',
+        'success': '#10b981',
+        'warning': '#f59e0b',
+      },
+      spacing: {
+        '0.5': '0.125rem',
+        '1': '0.25rem',
+        '1.5': '0.375rem',
+        '2': '0.5rem',
+        '2.5': '0.625rem',
+        '3': '0.75rem',
+        '3.5': '0.875rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '7': '1.75rem',
+        '8': '2rem',
+        '9': '2.25rem',
+        '10': '2.5rem',
+        '11': '2.75rem',
+        '12': '3rem',
+      },
+      animation: {
+        'float': 'float 5s ease-in-out infinite',
+        'pulse-glow': 'pulse-glow 3s ease-in-out infinite',
+        'slow-spin': 'slow-spin 8s linear infinite',
+        'gradient-shift': 'gradient-shift 15s ease infinite',
+        'fadeIn': 'fadeIn 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+        'slideInRight': 'slideInRight 0.4s cubic-bezier(0.22, 1, 0.36, 1) forwards',
+        'dropdownFadeIn': 'dropdownFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        'pulse-glow': {
+          '0%, 100%': { opacity: '0.5', filter: 'blur(10px)' },
+          '50%': { opacity: '0.8', filter: 'blur(15px)' },
+        },
+        'slow-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+        'gradient-shift': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+        fadeIn: {
+          from: { opacity: '0', transform: 'translateY(-15px) scale(0.98)' },
+          to: { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
+        slideInRight: {
+          from: { opacity: '0', transform: 'translateX(30px)' },
+          to: { opacity: '1', transform: 'translateX(0)' },
+        },
+        dropdownFadeIn: {
+          from: { opacity: '0', transform: 'translateY(-5px) scale(0.98)' },
+          to: { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
+      },
+      backdropBlur: {
+        xs: '2px',
+        sm: '4px',
+        md: '8px',
+        lg: '12px',
+        xl: '16px',
+        '2xl': '24px',
+        '3xl': '32px',
+      },
+      boxShadow: {
+        'glass': '0 8px 32px rgba(0, 0, 0, 0.3)',
+        'neon': '0 0 10px rgba(99, 102, 241, 0.6), 0 0 20px rgba(99, 102, 241, 0.3)',
+        'inner-light': 'inset 0 1px 1px rgba(255, 255, 255, 0.1)',
+      },
+      borderRadius: {
+        'xl': '0.75rem',
+        '2xl': '1rem',
+        '3xl': '1.5rem',
+        'pill': '9999px',
+      },
+    },
+  },
+  plugins: [],
+}
